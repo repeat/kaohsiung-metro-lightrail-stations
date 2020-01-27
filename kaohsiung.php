@@ -14,10 +14,6 @@ $geometry = [
 foreach ($stations as $station) {
     list($id, $name, $line, $zipcode, $address, $lat, $lon, $future) = $station;
 
-    if (1 == $future) {
-        continue;
-    }
-
     $geometry['coordinates'] = [(float) $lon, (float) $lat];
     $properties = [
         '編號' => (string) $id,
