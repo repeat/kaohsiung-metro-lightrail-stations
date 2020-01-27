@@ -1,4 +1,10 @@
 <?php
+// use wikipedia colors
+$colors = [
+    'R' => '#e20b65',
+    'O' => '#faa73f',
+];
+
 $lines = file('kaohsiung.csv');
 foreach ($lines as $line) {
     $stations[] = str_getcsv($line);
