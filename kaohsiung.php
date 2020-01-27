@@ -1,11 +1,13 @@
 <?php
+$area_name = 'kaohsiung';
+
 // use wikipedia colors
 $colors = [
     'R' => '#e20b65',
     'O' => '#faa73f',
 ];
 
-$lines = file('kaohsiung.csv');
+$lines = file($area_name . '.csv');
 foreach ($lines as $line) {
     $stations[] = str_getcsv($line);
 }
@@ -50,4 +52,6 @@ $geojson = [
     'features' => $features
 ];
 
-echo json_encode($geojson, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+$handle = fopen($area_name . '.geojson', 'w+');
+fwrite($handle, json_encode($geojson, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+fclose($handle);
