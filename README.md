@@ -7,4 +7,7 @@ type:
 - csv (kaohsiung.csv)
 - GeoJSON (kaohsiung.json)
 
-==Update in 2023 by Patrick Fung==
+高雄輕軌站相關資料
+
+type: 
+- csv (kaohsiung_lightrail.csv)
