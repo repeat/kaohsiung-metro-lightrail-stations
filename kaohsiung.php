@@ -32,10 +32,6 @@ foreach ($stations as $station) {
         '地址' => $address,
         '緯度' => (float) $lat,
         '經度' => (float) $lon,
-        // https://help.github.com/en/github/managing-files-in-a-repository/mapping-geojson-files-on-github#styling-features
-        'marker-size' => 'medium',
-        'marker-symbol' => 'rail-metro',
-        'marker-color' => $colors[$line_code],
     ];
 
     $feature = [
