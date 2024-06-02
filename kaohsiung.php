@@ -20,7 +20,7 @@ $geometry = [
 ];
 
 foreach ($stations as $station) {
-    list($id, $name, $line, $zipcode, $address, $lat, $lon, $future) = $station;
+    list($id, $name, $line, $zipcode, $address, $lat, $lon) = $station;
     $line_code = $id[0];
 
     $geometry['coordinates'] = [(float) $lon, (float) $lat];
